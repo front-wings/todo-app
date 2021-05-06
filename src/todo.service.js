@@ -19,7 +19,11 @@ export const TodoService = {
     todos.push(item);
   },
   filterBy: filter =>
-    filter === 'all' ? todos : todos.filter(todo => filter === 'isDone' ? todo.isDone : !todo.isDone),
+    filter === 'all'
+      ? todos
+      : todos.filter(todo =>
+          filter === 'isDone' ? todo.isDone : !todo.isDone
+        ),
   // eslint-disable-next-line no-unused-vars
   markAsDone: (title, done) => {
     const idx = todos.findIndex(it => it.title === title);
