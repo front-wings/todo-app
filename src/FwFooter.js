@@ -44,6 +44,7 @@ export class FwFooter extends LitElement {
               >."
             `}
       </p>
+      <p>the worlds best todo app</p>
     `;
   }
 }
