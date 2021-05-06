@@ -81,7 +81,7 @@ export class FrontWings extends LitElement {
       }
 
       .card__content {
-        background-color: aliceblue;
+        background-color: #fff;
       }
 
       button {
