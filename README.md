@@ -1,6 +1,7 @@
 # Front Wings ToDo App
 
 [![Built with open-wc recommendations](https://img.shields.io/badge/built%20with-open--wc-blue.svg)](https://github.com/open-wc)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 FrontWings ToDo App is one of the leading todo apps on the interwebz. Its very user-friendly and simple to use, which is one major selling point of this application.
 
