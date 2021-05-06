@@ -82,12 +82,12 @@ export class FwTodoTask extends LitElement {
     this.isDone = false;
   }
 
-  __markAsDone({ originalTarget: { checked } }) {
-    TodoService.markAsDone(this.title, checked);
+  // eslint-disable-next-line class-methods-use-this
+  __markAsDone(title) {
+    TodoService.markAsDone(title);
   }
 
   render() {
-    const { __markAsDone, isDone, title } = this;
 
     return html`
       <div class="todo-task">
@@ -95,12 +95,12 @@ export class FwTodoTask extends LitElement {
           <input
             id="checkbox"
             type="checkbox"
-            .checked=${isDone}
-            @click=${__markAsDone}
+            .checked=${this.isDone}
+            @click=${() => this.__markAsDone(this.title)}
           />
           <div class="fw-checkbox"></div>
         </div>
-        <label class="todo-task__label" for="checkbox">${title}</label>
+        <label class="todo-task__label" for="checkbox">${this.title}</label>
       </div>
     `;
   }

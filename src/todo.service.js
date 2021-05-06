@@ -28,6 +28,6 @@ export const TodoService = {
   markAsDone: (title, done) => {
     const idx = todos.findIndex(it => it.title === title);
     // TODO: change isDone parameter assignment with the done value
-    todos[idx] = { ...todos[idx], isDone: true };
+    todos[idx] = { ...todos[idx], isDone: !todos[idx].isDone };
   },
 };
