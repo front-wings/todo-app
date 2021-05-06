@@ -19,12 +19,15 @@ export const TodoService = {
     todos.push(item);
   },
   filterBy: filter =>
-    // TODO: todos.filter(todo => filter === 'isDone' ? todo.isDone : !todo.isDone)
-    filter === 'all' ? todos : todos.filter(todo => todo[filter]),
+    filter === 'all'
+      ? todos
+      : todos.filter(todo =>
+          filter === 'isDone' ? todo.isDone : !todo.isDone
+        ),
   // eslint-disable-next-line no-unused-vars
   markAsDone: (title, done) => {
     const idx = todos.findIndex(it => it.title === title);
     // TODO: change isDone parameter assignment with the done value
-    todos[idx] = { ...todos[idx], isDone: true };
+    todos[idx] = { ...todos[idx], isDone: !todos[idx].isDone };
   },
 };
